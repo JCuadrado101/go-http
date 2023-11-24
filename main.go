@@ -12,7 +12,7 @@ func main() {
 
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
-		w.Write([]byte("{\"hello\": \"world\"}"))
+		fmt.Fprint(w, "Hello, World!")
 	})
 
 	fmt.Print("Listening on port 8080\n")
